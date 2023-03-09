@@ -10,13 +10,13 @@ Worst case: ♾️
 
 ------------------------------------------------------------------------------------------------------
 
-If you want the program to actually have a better possiblity of sorting the array, change: 
+If you want the program to actually have a better probability of sorting the array, change: 
 
 `int[] arr = generateRandomArray(10);` to `int[] arr = generateRandomArray(5);` on line 5
 
 With the array size set to 5 there is a higher chance that the sort will complete before your CPU melts
 
-![image](https://user-images.githubusercontent.com/121529529/223895266-b9d824da-8b06-4d52-975a-937af7413338.png)
+![image](https://user-images.githubusercontent.com/121529529/223895551-85ebd905-f88f-4191-9e26-38a0c7dcbcee.png)
 
 ------------------------------------------------------------------------------------------------------
 (Enable sound for enhanced immersion)
