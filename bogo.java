@@ -4,16 +4,16 @@ public class bogo{
     public static void main(String[] args) {
         int[] arr = generateRandomArray(10); // Change the size of the array here
         System.out.println("Unsorted Array: " + Arrays.toString(arr));
-        int iterationCount = bogoSort(arr);
+        long iterationCount = bogoSort(arr);
         System.out.println("Sorted Array: " + Arrays.toString(arr));
         System.out.println("Iteration count: " + iterationCount);
     }
 
-    public static int bogoSort(int[] arr) { // Calls shuffle() until isSorted() returns true
-        int iterationCount = 0;
+    public static long bogoSort(int[] arr) { // Calls shuffle() until isSorted() returns true
+        long iterationCount = 0;
         while (!isSorted(arr)) {
             shuffle(arr);
-            System.out.println("Iteration" + (iterationCount+ 1)+ ": "+Arrays.toString(arr));
+            System.out.println("Iteration" + (iterationCount+ 1)+ ": "+Arrays.toString(arr)); //Comment out this line to stop the program from printing every iteration and get right to the final iteration count
             iterationCount++;
         }
         return iterationCount;
