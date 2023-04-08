@@ -2,9 +2,13 @@ import java.util.*;
 
 public class bogo{
     public static void main(String[] args) {
-        int[] arr = generateRandomArray(10); // Change the size of the array here
+        int[] arr = generateRandomArray(15); // Change the size of the array here
         System.out.println("Unsorted Array: " + Arrays.toString(arr));
         long iterationCount = bogoSort(arr);
+        if (iterationCount == Long.MAX_VALUE){ // If iterationCount overflows, the program will terminate
+            System.out.println("Overflow; Max iteration count reached");
+            System.exit(1);
+        }
         System.out.println("Sorted Array: " + Arrays.toString(arr));
         System.out.println("Iteration count: " + iterationCount);
     }
@@ -15,6 +19,9 @@ public class bogo{
             shuffle(arr);
             System.out.println("Iteration" + (iterationCount+ 1)+ ": "+Arrays.toString(arr)); //Comment out this line to stop the program from printing every iteration and get right to the final iteration count
             iterationCount++;
+            if (iterationCount == Long.MAX_VALUE){
+                break;
+           }
         }
         return iterationCount;
     }
